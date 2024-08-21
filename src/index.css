@@ -3,9 +3,18 @@
 @tailwind utilities;
 
 body {
-  background: rgb(0,80,96);
-  background: -moz-radial-gradient(circle, rgba(0,80,96,1) 0%, rgba(2,35,42,1) 100%);
-  background: -webkit-radial-gradient(circle, rgba(0,80,96,1) 0%, rgba(2,35,42,1) 100%);
-  background: radial-gradient(circle, rgba(0,80,96,1) 0%, rgba(2,35,42,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#005060",endColorstr="#02232a",GradientType=1);
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  background: rgb(0,129,147);
+  background: radial-gradient(circle, rgba(0,129,147,1) 0%, rgba(0,145,171,1) 50%, rgba(0,108,129,1) 100%);
+  /*background-color: #F0ECDA;*/
 }
+
+/* 
+#007794 
+#007678
+
+#007678
+#005C61
+*/
