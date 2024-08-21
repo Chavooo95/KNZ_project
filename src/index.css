@@ -6,8 +6,11 @@ body {
   max-width: 1366px;
   margin: 0 auto;
   padding: 0 1rem;
-  background: rgb(0,129,147);
-  background: radial-gradient(circle, rgba(0,129,147,1) 0%, rgba(0,145,171,1) 50%, rgba(0,108,129,1) 100%);
+  background: url("./assets/images/MainImage4K.png") no-repeat 0px -5em fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   /*background-color: #F0ECDA;*/
 }
 
