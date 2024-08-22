@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  max-width: 1366px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  background: url("./assets/images/MainImage4K.png") no-repeat 0px -5em fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  /*background-color: #F0ECDA;*/
-}
-
 /* 
 #007794 
 #007678
