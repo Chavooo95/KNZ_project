@@ -1,49 +1,87 @@
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import './App.css';
-import Logo from "./assets/images/logoKNZ.png";
 import Map from "./assets/images/H6LOA2E6_output_0.jpeg";
+import Logo from "./assets/images/logoKNZ.png"
+import Biografia from "./assets/images/biografia.png"
+import Colaboraciones from "./assets/images/colaboraciones.png"
+import Decoracion from "./assets/images/decoracion.png"
+import PuestaEscena from "./assets/images/puesta_en_escena.png"
+import TituloVestuarioEscenico from "./assets/images/titulo_vestuario_escenico.png"
 
 function App() {
   const mapRef = useRef(null);
   const [mapDimensions, setMapDimensions] = useState({ width: 0, height: 0 });
 
-  useEffect(() => {
+  const updateDimensions = () => {
     if (mapRef.current) {
       setMapDimensions({
         width: mapRef.current.clientWidth,
-        height: mapRef.current.clientHeight
+        height: mapRef.current.clientHeight,
       });
     }
+  };
+
+  useEffect(() => {
+    updateDimensions(); // Update dimensions after first render
+
+    // Optional: add a resize event listener to update dimensions if window is resized
+    window.addEventListener('resize', updateDimensions);
+    
+    return () => {
+      window.removeEventListener('resize', updateDimensions); // Cleanup on unmount
+    };
   }, []);
 
   return (
     <div className="w-screen h-screen overflow-visible">
-      <div className="flex flex-col items-center w-full h-full">
+      <div className="flex flex-col items-center w-full h-full relative">
         <img
           src={Map}
           ref={mapRef}
-          className="object-contain w-full h-full absolute -z-20"
+          className="object-contain w-auto h-full absolute -z-20"
           alt="Map"
+          onLoad={updateDimensions} // Update dimensions when image is fully loaded
         />
         
-        <div className="grid grid-cols-3 z-20 bg-red-400">
-          <div className="bg-yellow-300"><p>s</p></div>
-          <div></div>
-          <div></div>
-
-          <div></div>
-          <div>
-            <img
-              src={Logo}
-              className="w-[8vw] h-auto absolute -z-20 hidden"
-              alt="Logo"
-            />
+        {/* The div overlay with correct inline styling */}
+        <div
+          className="grid grid-cols-3"
+          style={{
+            width: `${mapDimensions.width}px`,
+            height: `${mapDimensions.height}px`,
+            top: 0,
+            left: 0,
+            border: '2px solid red', // Optional styling for visibility
+          }}
+        >
+          <div className="">
+            <img src={Biografia} className="w-[15vw] relative top-[5%] left-[45%]" alt="" />
           </div>
-          <div></div>
+
+          <div className="">
+            <img src={TituloVestuarioEscenico} className="w-[15vw] relative top-[30%] left-[15%]" alt="" />
+          </div>
+
+          <div className="">
+            <img src={PuestaEscena} className="w-[15vw] relative top-[0%] left-[-15%]" alt="" />
+          </div>
+
+          <div className="">
+            <img src={Colaboraciones} className="w-[15vw] relative top-[0%] left-[65%]" alt="" />
+          </div>
+
+          <div className="">
+            <img src={Logo} className="w-[8vw] relative top-[60%] left-[35%]" alt="" />
+          </div>
+
+          <div className="">
+            <img src={Decoracion} className="w-[15vw] relative top-[0%] left-[-10%]" alt="" />
+          </div>
+          
         </div>
-        <div className="w-screen h-screen"></div>
       </div>
 
+      {/* Display the dimensions below */}
       <div>
         <p>Map width: {mapDimensions.width}px</p>
         <p>Map height: {mapDimensions.height}px</p>
