@@ -51,23 +51,22 @@ function App() {
             height: `${mapDimensions.height}px`,
             top: 0,
             left: 0,
-            border: '2px solid red', // Optional styling for visibility
           }}
         >
           <div className="">
-            <img src={Biografia} className="w-[15vw] relative top-[5%] left-[45%]" alt="" />
+            <img src={Biografia} className="w-[15vw] relative top-[5%] left-[45%] opacity-0 hover:opacity-100 transition-opacity duration-300 cursor-pointer" alt="" />
           </div>
 
           <div className="">
-            <img src={TituloVestuarioEscenico} className="w-[15vw] relative top-[30%] left-[15%]" alt="" />
+            <img src={TituloVestuarioEscenico} className="w-[15vw] relative top-[30%] left-[15%] opacity-0 hover:opacity-100 transition-opacity duration-300 cursor-pointer" alt="" />
           </div>
 
           <div className="">
-            <img src={PuestaEscena} className="w-[15vw] relative top-[0%] left-[-15%]" alt="" />
+            <img src={PuestaEscena} className="w-[15vw] relative top-[0%] left-[-15%] opacity-0 hover:opacity-100 transition-opacity duration-300 cursor-pointer" alt="" />
           </div>
 
           <div className="">
-            <img src={Colaboraciones} className="w-[15vw] relative top-[0%] left-[65%]" alt="" />
+            <img src={Colaboraciones} className="w-[15vw] relative top-[0%] left-[65%] opacity-0 hover:opacity-100 transition-opacity duration-300 cursor-pointer" alt="" />
           </div>
 
           <div className="">
@@ -75,7 +74,7 @@ function App() {
           </div>
 
           <div className="">
-            <img src={Decoracion} className="w-[15vw] relative top-[0%] left-[-10%]" alt="" />
+            <img src={Decoracion} className="w-[15vw] relative top-[0%] left-[-10%] opacity-0 hover:opacity-100 transition-opacity duration-300 cursor-pointer" alt="" />
           </div>
           
         </div>
