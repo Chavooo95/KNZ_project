@@ -79,12 +79,6 @@ function App() {
           
         </div>
       </div>
-
-      {/* Display the dimensions below */}
-      <div>
-        <p>Map width: {mapDimensions.width}px</p>
-        <p>Map height: {mapDimensions.height}px</p>
-      </div>
     </div>
   );
 }
