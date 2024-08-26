@@ -7,6 +7,7 @@ import Colaboraciones from "../assets/images/colaboraciones.png"
 import Decoracion from "../assets/images/decoracion.png"
 import PuestaEscena from "../assets/images/puesta_en_escena.png"
 import VestuarioEscenico from "../assets/images/titulo_vestuario_escenico.png"
+import LogoDetras from "../assets/images/contacto_knz.png"
 
 
 export default function Home() {
@@ -80,9 +81,39 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="">
-              <img src={Logo} className="w-[8vw] relative top-[60%] left-[35%]" alt="" />
+            <div
+          className="relative w-[8vw] h-[8vw] top-[60%] left-[35%] logo-flip-container cursor-pointer"
+          style={{ perspective: '1000px' }}
+        >
+          <div
+            className="relative w-full h-full logo-flip-inner"
+            style={{
+              transformStyle: 'preserve-3d',
+              transition: 'transform 0.5s',
+            }}
+          >
+            {/* Front side */}
+            <div
+              className="absolute inset-0"
+              style={{
+                backfaceVisibility: 'hidden',
+              }}
+            >
+              <img src={Logo} className="w-full h-full" alt="Logo Front" />
             </div>
+
+            {/* Back side */}
+            <div
+              className="absolute inset-0"
+              style={{
+                backfaceVisibility: 'hidden',
+                transform: 'rotateY(180deg)',
+              }}
+            >
+              <img src={LogoDetras} className="w-full h-full" alt="Logo Back" />
+            </div>
+          </div>
+        </div>
 
             <div className="">
               <Link to="decoracion">
