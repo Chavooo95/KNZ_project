@@ -6,7 +6,7 @@ import Biografia from "../assets/images/biografia.png"
 import Colaboraciones from "../assets/images/colaboraciones.png"
 import Decoracion from "../assets/images/decoracion.png"
 import PuestaEscena from "../assets/images/puesta_en_escena.png"
-import VestuarioEscenico from "../assets/images/titulo_vestuario_escenico.png"
+import Cameos from "../assets/images/cameos.png"
 import LogoDetras from "../assets/images/contacto_knz.png"
 
 
@@ -65,7 +65,7 @@ export default function Home() {
 
             <div className="">
               <Link to="vestuario-escenico">
-                <img src={VestuarioEscenico} className="w-[15vw] relative top-[30%] left-[15%] opacity-0 hover:opacity-100 transition-opacity duration-300 cursor-pointer" alt="" />
+                <img src={Cameos} className="w-[15vw] relative top-[30%] left-[15%] opacity-0 hover:opacity-100 transition-opacity duration-300 cursor-pointer" alt="" />
               </Link>
             </div>
 
